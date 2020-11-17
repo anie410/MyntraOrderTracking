@@ -3,4 +3,4 @@ If you want to know all the orders created by you on myntra in a text file witho
 
 All you need to give is the otp sent on your mobile for verification.
 
-Run the scrapper and it will save all your order details in a text file.
+Run the webscrapper.py on pycharm or any ide (Prerequisites: Selenium,Bs4 preinstalled) and it will save all your order details in a text file as shown in file.txt.
