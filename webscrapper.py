@@ -37,17 +37,19 @@ WebDriverWait(driver,3)
 ps=driver.page_source
 f=open('file.txt', 'a')
 soup = BeautifulSoup(ps)
+f.writelines('\n')
 for tag in soup.find_all('span',class_="Text-Text"):
     print (tag.text)
     f.writelines(tag.text+'\n')
 
-p="//*[@id='mountRoot']/div/div/div[3]/div[2]"
+p="/html/body/div[2]/div/div/div[3]/div[2]"
 driver.find_element_by_xpath(p).click()
 time.sleep(5)
 print(driver.page_source.encode('utf-8'))
 WebDriverWait(driver,3)
 ps=driver.page_source
 s = BeautifulSoup(ps)
+f.writelines('\n')
 for tag in s.find_all('span',class_="Text-Text"):
     print (tag.text)
     f.writelines(tag.text+'\n')
@@ -59,6 +61,7 @@ print(driver.page_source.encode('utf-8'))
 WebDriverWait(driver,3)
 ps=driver.page_source
 v = BeautifulSoup(ps)
+f.writelines('\n')
 for tag in v.find_all('span',class_="Text-Text"):
     print (tag.text)
     f.writelines(tag.text+'\n')
@@ -71,6 +74,7 @@ for i in range(9):
     WebDriverWait(driver, 3)
     ps = driver.page_source
     v = BeautifulSoup(ps)
+    f.writelines('\n')
     for tag in v.find_all('span',class_="Text-Text"):
         print(tag.text)
         f.writelines(tag.text+'\n')
